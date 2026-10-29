@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suspicious Message Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">🛡️ CyberSafe</div>
+        <p>Think Before You Click</p>
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+            <h1>Suspicious Message Analyzer</h1>
+            <p>
+                Check messages for common phishing warning signs
+                before clicking links or sharing personal information.
+            </p>
+        </section>
+
+        <section class="analyzer card">
+            <label for="sender">Sender (optional)</label>
+            <input
+                type="text"
+                id="sender"
+                placeholder="Example: support@example.com"
+            >
+
+            <label for="message">Paste the suspicious message</label>
+            <textarea
+                id="message"
+                rows="7"
+                placeholder="Paste an email, SMS, or message here..."
+            ></textarea>
+
+            <button id="analyzeBtn" type="button">
+                Analyze Message
+            </button>
+
+            <p class="privacy">
+                Privacy: This demo analyzes text in your browser.
+                Do not paste passwords, OTPs, or private information.
+            </p>
+        </section>
+
+        <section id="results" class="card results" hidden>
+            <h2>Analysis Results</h2>
+
+            <div class="score-box">
+                <p>Warning Score</p>
+                <div id="score">0/100</div>
+                <h3 id="riskLevel">Not analyzed</h3>
+                <p id="riskDescription"></p>
+            </div>
+
+            <h3>Warning Signs</h3>
+            <ul id="warningList"></ul>
+
+            <h3>Recommended Actions</h3>
+            <ul id="actionList"></ul>
+
+            <div class="actions">
+                <button id="notEnteredBtn" class="secondary">
+                    I Did Not Enter Details
+                </button>
+
+                <button id="enteredBtn" class="danger">
+                    I Entered My Details
+                </button>
+            </div>
+
+            <div id="nextSteps" class="next-steps" hidden>
+                <h3>What to do next</h3>
+                <ul id="nextStepsList"></ul>
+            </div>
+        </section>
+
+        <section class="card tips">
+            <h2>Remember These Safety Rules</h2>
+            <ul>
+                <li>Do not share passwords or OTPs.</li>
+                <li>Do not trust urgent messages automatically.</li>
+                <li>Check the sender through an official channel.</li>
+                <li>Open the official website yourself instead of using a message link.</li>
+                <li>Report suspicious messages to your organization or service provider.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CyberSafe Awareness Project | Educational Demo</p>
+        <p>This tool cannot prove whether a message is genuine or malicious.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
